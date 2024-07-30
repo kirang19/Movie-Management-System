@@ -1,0 +1,31 @@
+# Python compiled files
+*.pyc
+__pycache__/
+
+# Environment variables
+.env
+.env.*
+
+# Django SQLite database
+*.sqlite3
+
+# Static and media files
+/static/
+/media/
+
+# Virtual environment
+venv/
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Editor specific files
+*.swp
+*~
+
+# Log files
+*.log
+
+# Django specific files
+/migrations/

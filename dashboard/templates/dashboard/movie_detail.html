@@ -1,0 +1,47 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+<!-- <article class="media content-section row ">
+  <div class="col-4">
+    <img class="img-fluid" src="{{ movie.m_image.url }}">
+  </div>
+  <div class="col-8">
+    <img class="rounded-circle article-img" src="{{ movie.author.profile.image.url }}">
+    <div class="media-body">
+      <div class="article-metadata">
+        <a class="mr-2" href="#">{{ movie.author}}</a>
+        <small class="text-muted">{{ movie.release_date|date:"F d, Y" }}</small>
+      </div>
+      <h2><a class="article-title" href="{% url 'movie-detail' movie.id %}">{{ movie.title }}</a></h2>
+      <p class="article-content">{{ movie.description }}</p>
+      <div>
+        <ul>
+          <li>Language: {{ movie.language }}</li>
+          <li>PG Rating: {{ movie.pg_rating }}</li>
+          <li>Duration: {{ movie.duration }}</li>
+          <li>Genre: {{ movie.genre }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article> -->
+<article class="media content-section">
+  <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#">{{ object.author }}</a>
+      <small class="text-muted">{{ object.release_date|date:"F d, Y" }}</small>
+      <h2 class="article-title">{{ object.title }}</a></h2>
+      <p class="article-content">{{ object.description }}</p>
+    </div>
+    <ul>
+      <li>Language: {{ object.language }}</li>
+      <li>PG Rating: {{ object.pg_rating }}</li>
+      <li>Duration: {{ object.duration }}</li>
+      <li>Genre: {{ object.genre}}</li>
+    </ul>
+    {% if user.is_authenticated %}
+    <center><a class="btn btn-primary" href="book">Book Now</a></center>
+    {% endif %}
+  </div>
+</article>
+{% endblock content %}
